@@ -15,7 +15,7 @@ export default class SingleItem extends React.Component {
         return (
             <div className="cart-body row "> 
                 <div className="col-4">
-                    <img src={this.props.number.image_url}></img>
+                    <img src={this.props.number.image_url} alt={this.props.number.name}></img>
                     <div>{this.props.number.offer}</div>
                     </div> 
                 <div className="col-8">

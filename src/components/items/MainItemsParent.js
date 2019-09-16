@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SingleItem from './SingleItem'
+import Action from '../../services/actions'
 
 export default class MainComponentItems extends React.Component {
     constructor() {
@@ -12,21 +13,17 @@ export default class MainComponentItems extends React.Component {
       }
       componentWillMount() {
        // console.log("componentWillMount")
-        this.fetchService();
+       let dataAction = new Action();
+       dataAction.actGetData().then((response) => {
+        this.setState({ message: response });
+       }, (error) => {
+
+       })
+      
       }
       componentDidMount() {
         //console.log("componentDidMount")
       }
-      fetchService() {
-        fetch('/database.json').then((res) => {
-          return res.json();
-        }).then((success) => {
-          this.data = success.result.products;
-          this.setState({ message: this.data });
-         // console.log(this.state.message)
-        })
-      }
-      
     
         render() {
           return (  
