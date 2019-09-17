@@ -10,12 +10,11 @@ export default class Cart extends Component {
         }
     }
     componentWillReceiveProps(cartData) {
+        console.log(cartData)
         let obj = {}
         obj.total = 0
         obj.qty = 0;
         this.total= 0;
-        //this.setState(obj)
-       // console.log(cartData)
         (cartData.finalData).map(item => {
             this.total += item.price;
             return item;

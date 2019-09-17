@@ -11,7 +11,7 @@ img {
 }
 
 .col-4 {
-    width: 33%;
+    
     position: relative;
     left: -2px;
     transform: translate(3px, 1px);
@@ -59,4 +59,16 @@ button {
     right: 16px;
     background: yellowgreen;
     width: 135px;
+}
+
+.plus-minus {
+    border-radius: 50%;
+    height: 24px;
+    width: 29px;
+    font-size: 20px;
+}
+.item-quantity {
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-top: 8px;
 }
